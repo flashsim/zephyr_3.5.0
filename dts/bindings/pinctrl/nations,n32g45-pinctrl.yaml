@@ -1,0 +1,50 @@
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+    N32 Pin controller Node
+
+compatible: "nations,n32g45-pinctrl"
+
+include: base.yaml
+
+properties:
+  reg:
+    required: true
+
+child-binding:
+  description: |
+      This binding gives a base representation of the N32 pins configration
+
+  include:
+    - name: pincfg-node.yaml
+      property-allowlist:
+        - bias-disable
+        - bias-pull-down
+        - bias-pull-up
+        - drive-push-pull
+        - drive-open-drain
+        - output-low
+        - output-high
+
+  properties:
+    pinmux:
+      required: true
+      type: int
+      description: |
+        Pin Mux.
+        
+        
+        
+    slew-rate:
+      type: string
+      default: "max-speed-10mhz"
+      enum:
+        - "max-speed-10mhz"       # Default
+        - "max-speed-2mhz"
+        - "max-speed-50mhz"
+      description: |
+        Pin output mode, maximum achievable speed. Only applies to
+        output mode (alternate).
+        
+        
+        

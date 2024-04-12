@@ -1,0 +1,28 @@
+# ADC configuration options
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config CAN_N32_BXCAN
+	bool  "N32 MCU bxCAN driver"
+	default y
+    
+    select USE_N32_BXCAN
+	select CAN_N32_INTERRUPT
+	help
+	  Enable bxCAN support on the N32 family of processors.
+      
+      
+if CAN_N32_BXCAN
+
+config CAN_MAX_STANDARD_ID_FILTER
+	int "Maximum number of standard (11-bit) ID filters"
+	default 14
+	range 0 28
+	
+
+config CAN_MAX_EXTENDED_ID_FILTER
+	int "Maximum number of extended (29-bit) ID filters"
+	default 7
+	range 0 14
+	
+endif # CAN_N32_BXCAN

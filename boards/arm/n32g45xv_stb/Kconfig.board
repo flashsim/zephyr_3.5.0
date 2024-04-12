@@ -1,0 +1,7 @@
+# N32G45XV-STB Development Board
+
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_N32G45XV_STB
+	bool "NATIONS N32G45XV-STB"
+	depends on SOC_N32G45X

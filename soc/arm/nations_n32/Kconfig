@@ -1,0 +1,19 @@
+# Copyright (c) 2024 Nationstech MCU 
+#  
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_FAMILY_NATIONS_N32
+	bool
+    select HAS_NATIONS_N32_HAL
+	select HAS_SEGGER_RTT if ZEPHYR_SEGGER_MODULE
+	select BUILD_OUTPUT_HEX
+
+if SOC_FAMILY_NATIONS_N32
+
+config SOC_FAMILY
+	string
+	default "nations_n32"
+
+source "soc/arm/nations_n32/*/Kconfig.soc"
+
+endif # SOC_FAMILY_NATIONS_N32

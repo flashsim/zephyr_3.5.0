@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+
+choice
+	prompt "N32G45 MCU Selection"
+	depends on SOC_SERIES_N32G45
+
+config SOC_N32G45X
+	bool "SOC_N32G45X"
+
+endchoice
+

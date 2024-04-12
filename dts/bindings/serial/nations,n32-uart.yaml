@@ -1,0 +1,17 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: Apache-2.0
+
+description: N32 UART
+
+compatible: "nations,n32-uart"
+
+include: [uart-controller.yaml, pinctrl-device.yaml]
+
+properties:
+    reg:
+      required: true
+
+    clocks:
+      required: true
+
+

@@ -1,0 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+#include <nations/n32g45x/n32g45.dtsi>
+
+
+
+&flash0 {
+    reg = <0x08000000 DT_SIZE_K(512)>;
+};
+
+&nvic {
+	arm,num-irq-priority-bits = <4>;
+};

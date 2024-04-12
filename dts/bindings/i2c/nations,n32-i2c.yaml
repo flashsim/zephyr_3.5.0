@@ -1,0 +1,25 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: Apache-2.0
+
+description: N32 I2C
+
+include: [i2c-controller.yaml, pinctrl-device.yaml]
+
+compatible: "nations,n32-i2c"
+
+properties:
+  reg:
+    required: true
+
+  pinctrl-0:
+    type: phandles
+    required: true
+
+  interrupts:
+    required: true
+      
+  pinctrl-names:
+    required: true
+    
+  clocks:
+    required: true

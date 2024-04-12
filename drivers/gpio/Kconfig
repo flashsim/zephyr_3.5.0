@@ -207,5 +207,5 @@ source "drivers/gpio/Kconfig.davinci"
 source "drivers/gpio/Kconfig.sedi"
 
 source "drivers/gpio/Kconfig.altera"
-
+source "drivers/gpio/Kconfig.n32"
 endif # GPIO

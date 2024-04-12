@@ -1,0 +1,8 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: Apache-2.0
+
+description: Nations N32 Family flash controller
+
+compatible: "nations,n32-flash-controller"
+
+include: flash-controller.yaml

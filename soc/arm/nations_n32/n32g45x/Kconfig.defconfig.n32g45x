@@ -1,0 +1,13 @@
+
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_N32G45X
+
+config SOC
+	default "N32G45X"
+
+config NUM_IRQS
+	default 86
+endif # SOC_N32G45X
+
+

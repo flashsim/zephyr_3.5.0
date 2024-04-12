@@ -1,0 +1,112 @@
+# nations HAL config
+
+# Copyright (c) 2024 
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config N32_HAS_AF_PINMUX
+	bool
+	help
+	  This option should be selected if the series use an AF pinmux model.
+
+config N32_HAS_AFIO_PINMUX
+	bool
+	help
+	  This option should be selected if the series use an AFIO pinmux model.
+
+
+config HAS_NATIONS_N32_HAL
+	bool
+	select HAS_CMSIS_CORE if ARM
+
+
+
+
+if HAS_NATIONS_N32_HAL
+
+
+choice N32_HXTAL_FREQUENCY
+	prompt "High speed external oscillator clock frequency"
+    default N32_HXTAL_FIRMWARE_DEFINED
+    default N32_HXTAL_8MHZ if SOC_SERIES_N32G45
+    help
+      Define value of high speed crystal oscillator (HXTAL) in Hz
+	  This value sets the frequency of the oscillator.
+
+config N32_HXTAL_FIRMWARE_DEFINED
+	bool "Firmware defined"
+	help
+	  Use default frequency defined in firmware for HXTAL
+	  This is using for SoCs (e.g., etc ...)
+	  that have default HXTAL definitions in firmware.
+
+config N32_HXTAL_8MHZ
+	bool "8MHz"
+	help
+	  Use 8MHz oscillator for HXTAL
+
+endchoice
+
+
+
+config USE_N32_RCC
+	bool
+	help
+	  Enable N32 Reset and Clock Control (RCC) HAL module driver
+    default y
+
+config USE_N32_DMA
+	bool
+	help
+	  Enable N32 Direct Memory Access controller (DMA) HAL module driver
+    default y
+
+config USE_N32_GPIO
+	bool
+	default y
+	help
+	  Enable N32 General-purpose and Alternate-Function I/Os
+	  (GPIO and AFIO) HAL module driver
+
+
+config USE_N32_UART
+	bool
+	help
+	  Enable N32 Universal Synchronous/Asynchronous Receiver/Transmitter
+	  (UART) HAL module driver
+    default y
+
+config USE_N32_I2C
+	bool
+    help
+	  Enable N32 Inter-Integrated Circuit (I2C) HAL module driver
+    default y
+
+config USE_N32_SPI
+	bool
+    help
+	  Enable N32 Inter-Integrated Circuit (SPI) HAL module driver
+    default y
+
+config CONFIG_USE_N32_BXCAN
+	bool
+    help
+	  Enable N32 Inter-Integrated Circuit (CAN) HAL module driver
+    default y
+    
+    
+config USE_N32_ADC
+	bool
+    help
+	  Enable N32 Inter-Integrated Circuit (ADC) HAL module driver
+    default y
+
+
+
+
+
+
+
+
+endif # HAS_NATIONS_N32_HAL

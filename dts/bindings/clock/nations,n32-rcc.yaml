@@ -1,0 +1,62 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  N32 Reset and Clock controller node.
+  This node is in charge of system clock ('SYSCLK') source selection and controlling
+  clocks for AHB (Advanced High Performance) and APB (Advanced Peripheral) bus domains.
+
+compatible: "nations,n32-rcc"
+
+include: [clock-controller.yaml, base.yaml]
+
+properties:
+    reg:
+      required: true
+
+    "#clock-cells":
+      const: 1
+
+    clock-frequency:
+      required: false
+      type: int
+      description: |
+        default frequency in Hz for clock output
+
+    ahb-prescaler:
+      type: int
+      required: false
+      enum:
+        - 1
+        - 2
+        - 4
+        - 8
+        - 16
+        - 64
+        - 128
+        - 256
+        - 512
+      description: AHB prescaler.
+
+    apb1-prescaler:
+      type: int
+      required: false
+      enum:
+        - 1
+        - 2
+        - 4
+        - 8
+        - 16
+
+    apb2-prescaler:
+      type: int
+      required: false
+      enum:
+        - 1
+        - 2
+        - 4
+        - 8
+        - 16
+
+clock-cells:
+  - bits

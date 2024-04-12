@@ -1,0 +1,7 @@
+# Nations N32G45XV-STB development board configuration
+
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD
+	default "n32g45xv-stb"
+	depends on BOARD_N32G45XV-STB

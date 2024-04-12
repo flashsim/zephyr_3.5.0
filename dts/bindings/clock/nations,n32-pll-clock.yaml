@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: Apache-2.0
+
+description: Generic fixed-rate clock provider
+  
+compatible: "nations,n32-pll-clock.yaml"
+
+include: [clock-controller.yaml, base.yaml]
+
+properties:
+  "#clock-cells":
+    const: 0
+
+  clocks:
+    required: true
+
+  mul:
+    type: int
+    required: true
+    description: |
+        Main PLL multiplication factor for VCO
+        Valid range: 2 - 16
+
+
+
+
+
+
+
+

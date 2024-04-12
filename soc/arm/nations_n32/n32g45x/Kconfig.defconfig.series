@@ -1,0 +1,20 @@
+
+# SPDX-License-Identifier: Apache-2.0
+
+# Kconfig symbols common to n32g45x series
+
+
+
+
+
+if SOC_SERIES_N32G45
+
+source "soc/arm/nations_n32/n32g45x/Kconfig.defconfig.n32g45x*"
+
+config SOC_SERIES
+	default "n32g45x"
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	default $(dt_node_int_prop_int,/clocks/clk_sys,clock-frequency)
+
+endif # SOC_SERIES_N32G45

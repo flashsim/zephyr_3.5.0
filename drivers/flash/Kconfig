@@ -158,4 +158,5 @@ source "drivers/flash/Kconfig.nxp_s32"
 
 source "drivers/flash/Kconfig.andes"
 
+source "drivers/flash/Kconfig.n32"
 endif # FLASH

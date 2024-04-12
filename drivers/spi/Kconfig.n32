@@ -1,0 +1,15 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: Apache-2.0
+
+
+
+
+config SPI_N32
+	bool "N32 MCU SPI driver"
+	default y
+
+	#select USE_N32_SPI
+    select SPI_N32_INTERRUPT
+	help
+	  Enable I2C support on the N32 family of processors.
+      

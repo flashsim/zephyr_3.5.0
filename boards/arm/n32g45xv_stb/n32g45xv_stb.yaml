@@ -1,0 +1,16 @@
+identifier: n32g45xv_stb
+name: N32G45XV-STB
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+
+ram: 144
+flash: 512
+supported:
+  - gpio
+  - i2c
+  - spi
+  - uart
+vendor: nations

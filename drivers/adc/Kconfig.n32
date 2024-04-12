@@ -1,0 +1,13 @@
+# ADC configuration options
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config ADC_N32
+	bool  "N32 MCU ADC driver"
+	default y
+    
+    select USE_N32_ADC
+	select ADC_N32_INTERRUPT
+	help
+	  Enable ADC support on the N32 family of processors.
+      
