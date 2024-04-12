@@ -24,16 +24,142 @@ manifest:
     - name: babblesim
       url-base: https://github.com/BabbleSim
 
-    - name: flashsim
-      url-base: https://github.com/flashsim
-
-  group-filter: [-babblesim, -flashsim]
-
+  group-filter: [-babblesim, -optional]
 
   #
   # Please add items below based on alphabetical order
   projects:
- 
+    - name: acpica
+      revision: 0333c2af13179f9b33d495cf7cb9a509f751cbb1
+      path: modules/lib/acpica
+    - name: bsim
+      repo-path: babblesim-manifest
+      revision: 384a091445c57b44ac8cbd18ebd245b47c71db94
+      path: tools/bsim
+      groups:
+        - babblesim
+    - name: babblesim_base
+      remote: babblesim
+      repo-path: base.git
+      path: tools/bsim/components
+      revision: 19d62424c0802c6c9fc15528febe666e40f372a1
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_libPhyComv1
+      remote: babblesim
+      repo-path: ext_2G4_libPhyComv1.git
+      path: tools/bsim/components/ext_2G4_libPhyComv1
+      revision: 9018113a362fa6c9e8f4b9cab9e5a8f12cc46b94
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_phy_v1
+      remote: babblesim
+      repo-path: ext_2G4_phy_v1.git
+      path: tools/bsim/components/ext_2G4_phy_v1
+      revision: d47c6dd90035b41b14f6921785ccb7b8484868e2
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_channel_NtNcable
+      remote: babblesim
+      repo-path: ext_2G4_channel_NtNcable.git
+      path: tools/bsim/components/ext_2G4_channel_NtNcable
+      revision: 20a38c997f507b0aa53817aab3d73a462fff7af1
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_channel_multiatt
+      remote: babblesim
+      repo-path: ext_2G4_channel_multiatt.git
+      path: tools/bsim/components/ext_2G4_channel_multiatt
+      revision: bde72a57384dde7a4310bcf3843469401be93074
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_modem_magic
+      remote: babblesim
+      repo-path: ext_2G4_modem_magic.git
+      path: tools/bsim/components/ext_2G4_modem_magic
+      revision: cb70771794f0bf6f262aa474848611c68ae8f1ed
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_modem_BLE_simple
+      remote: babblesim
+      repo-path: ext_2G4_modem_BLE_simple.git
+      path: tools/bsim/components/ext_2G4_modem_BLE_simple
+      revision: 809ab073159c9ab6686c2fea5749b0702e0909f7
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_device_burst_interferer
+      remote: babblesim
+      repo-path: ext_2G4_device_burst_interferer.git
+      path: tools/bsim/components/ext_2G4_device_burst_interferer
+      revision: 5b5339351d6e6a2368c686c734dc8b2fc65698fc
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_device_WLAN_actmod
+      remote: babblesim
+      repo-path: ext_2G4_device_WLAN_actmod.git
+      path: tools/bsim/components/ext_2G4_device_WLAN_actmod
+      revision: 9cb6d8e72695f6b785e57443f0629a18069d6ce4
+      groups:
+        - babblesim
+    - name: babblesim_ext_2G4_device_playback
+      remote: babblesim
+      repo-path: ext_2G4_device_playback.git
+      path: tools/bsim/components/ext_2G4_device_playback
+      revision: 85c645929cf1ce995d8537107d9dcbd12ed64036
+      groups:
+        - babblesim
+    - name: babblesim_ext_libCryptov1
+      remote: babblesim
+      repo-path: ext_libCryptov1.git
+      path: tools/bsim/components/ext_libCryptov1
+      revision: eed6d7038e839153e340bd333bc43541cb90ba64
+      groups:
+        - babblesim
+    - name: canopennode
+      revision: dec12fa3f0d790cafa8414a4c2930ea71ab72ffd
+      path: modules/lib/canopennode
+    - name: cmsis
+      revision: 5a00331455dd74e31e80efa383a489faea0590e3
+      path: modules/hal/cmsis
+      groups:
+        - hal
+    - name: cmsis-dsp
+      revision: ff7b5fd1ea5f094665c090c343ec44e74dc0b193
+      path: modules/lib/cmsis-dsp
+    - name: cmsis-nn
+      revision: 0c8669d81381ccf3b1a01d699f3b68b50134a99f
+      path: modules/lib/cmsis-nn
+    - name: edtt
+      revision: 64e5105ad82390164fb73fc654be3f73a608209a
+      path: tools/edtt
+      groups:
+        - tools
+    - name: fatfs
+      revision: 427159bf95ea49b7680facffaa29ad506b42709b
+      path: modules/fs/fatfs
+      groups:
+        - fs
+    - name: hal_altera
+      revision: 0d225ddd314379b32355a00fb669eacf911e750d
+      path: modules/hal/altera
+      groups:
+        - hal
+    - name: hal_ambiq
+      revision: 0a7c99325aa73a1ef777501da91c2c6608661e56
+      path: modules/hal/ambiq
+      groups:
+        - hal
+    - name: hal_atmel
+      revision: 5ab43007eda3f380c125f957f03638d2e8d1144d
+      path: modules/hal/atmel
+      groups:
+        - hal
+    - name: hal_espressif
+      revision: 31fc5758f3507f8f0af00b1dea1a0df7af99bfc0
+      path: modules/hal/espressif
+      west-commands: west/west-commands.yml
+      groups:
+        - hal
     - name: hal_ethos_u
       revision: 90ada2ea5681b2a2722a10d2898eac34c2510791
       path: modules/hal/ethos_u
@@ -167,12 +293,49 @@ manifest:
       path: tools/net-tools
       groups:
         - tools
-    - name: hal_nations
-      revision: 7d87348240d469afec2d639377c164cec7dd9337
-      path: modules/hal/nations
-      remote: flashsim
+    - name: nrf_hw_models
+      revision: f4595802d32d103718bf50b3d390b7a450895843
+      path: modules/bsim_hw_models/nrf_hw_models
+    - name: open-amp
+      revision: 42b7c577714b8f22ce82a901e19c1814af4609a8
+      path: modules/lib/open-amp
+    - name: openthread
+      revision: d62167ee34b091e7025c9ec2820aae71e17a3944
+      path: modules/lib/openthread
+    - name: percepio
+      path: modules/debug/percepio
+      revision: a3728efccc47dd372f40e6313589ca4c5cc7d5e9
       groups:
-        - hal 
+        - debug
+    - name: picolibc
+      path: modules/lib/picolibc
+      revision: d07c38ff051386f8e09a143ea0a6c1d6d66dd1d8
+    - name: segger
+      revision: 9d0191285956cef43daf411edc2f1a7788346def
+      path: modules/debug/segger
+      groups:
+        - debug
+    - name: tinycrypt
+      revision: 3e9a49d2672ec01435ffbf0d788db6d95ef28de0
+      path: modules/crypto/tinycrypt
+      groups:
+        - crypto
+    - name: trusted-firmware-m
+      revision: b168d92c7ed3c77c94d7ce3362bdde5dbffe8424
+      path: modules/tee/tf-m/trusted-firmware-m
+      groups:
+        - tee
+    - name: trusted-firmware-a
+      revision: 421dc050278287839f5c70019bd6aec617f2bbdb
+      path: modules/tee/tf-a/trusted-firmware-a
+      groups:
+        - tee
+    - name: uoscore-uedhoc
+      revision: 5fe2cb613bd7e4590bd1b00c2adf181ac0229379
+      path: modules/lib/uoscore-uedhoc
+    - name: zcbor
+      revision: 67fd8bb88d3136738661fa8bb5f9989103f4599e
+      path: modules/lib/zcbor
 
   self:
     path: zephyr
