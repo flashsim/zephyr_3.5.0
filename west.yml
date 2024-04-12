@@ -23,8 +23,10 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: babblesim
       url-base: https://github.com/BabbleSim
+    - name: flashsim
+      url-base: https://github.com/flashsim
 
-  group-filter: [-babblesim, -optional]
+  group-filter: [-babblesim, -flashsim, -optional]
 
   #
   # Please add items below based on alphabetical order
@@ -336,7 +338,13 @@ manifest:
     - name: zcbor
       revision: 67fd8bb88d3136738661fa8bb5f9989103f4599e
       path: modules/lib/zcbor
-
+      
+    - name: hal_nations
+      revision: 7d87348240d469afec2d639377c164cec7dd9337
+      path: modules/hal/nations
+      remote: flashsim
+      groups:
+        - hal 
   self:
     path: zephyr
     west-commands: scripts/west-commands.yml
