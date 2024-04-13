@@ -113,54 +113,17 @@ Flashing
 Follow the :ref:`getting_started` instructions for Zephyr application
 development.
 
-For example, to build and flash the :ref:`hello_world` application for the
-MSP-EXP432P401R LaunchXL:
-
-.. zephyr-app-commands::
-   :zephyr-app: samples/hello_world
-   :board: msp_exp432p401r_launchxl
-   :goals: flash
-
-This will load the image into flash.
-
-To see program output from UART0, connect a separate terminal window:
-
-.. code-block:: console
-
-  % screen /dev/ttyACM0 115200 8N1
-
-Then press the reset button (S3) on the board to run the program.
 
 Debugging
 =========
 
-To debug a previously flashed image, after resetting the board, use the 'debug'
-build target:
 
-.. zephyr-app-commands::
-   :zephyr-app: samples/hello_world
-   :board: msp_exp432p401r_launchxl
-   :maybe-skip-config:
-   :goals: debug
 
 References
 **********
 
 .. Nationstech Cortex-M4 High Performance SoC Website:
-	https://www.gigadevice.com.cn/product/mcu/arm-cortex-m33/gd32a503vdt3
+	https://www.nationstech.com/N32G457/
 
 
-TI MSP432P401R Product Page:
-   http://www.ti.com/product/msp432p401r
 
-TI MSP432 SDK:
-   http://www.ti.com/tool/SIMPLELINK-MSP432-SDK
-
-.. _UniFlash:
-   http://processors.wiki.ti.com/index.php/UniFlash_v4_Quick_Guide#Command_Line_Interface
-
-.. _CCS IDE:
-   http://www.ti.com/tool/ccstudio
-
-..  _XDS-110 emulation package:
-   http://processors.wiki.ti.com/index.php/XDS_Emulation_Software_Package#XDS_Emulation_Software_.28emupack.29_Download
