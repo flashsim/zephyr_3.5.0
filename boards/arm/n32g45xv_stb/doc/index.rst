@@ -31,7 +31,7 @@ For more information about the N32G45X SoC and N32G45X-STB board:
 - `N32G45X Cortex-M4F High Performance SoC Website`_
 - `N32G457 Datasheet`_
 - `N32G457 Reference Manual`_
-- `GD32A503V Eval Schematics`_
+
 
 
 
@@ -123,7 +123,7 @@ References
 **********
 
 .. Nationstech Cortex-M4 High Performance SoC Website:
-	https://www.nationstech.com/N32G457/
+	https://www.nationstech.com/N32L40x/
 
 
 
