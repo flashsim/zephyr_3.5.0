@@ -28,7 +28,7 @@ Hardware
 
 For more information about the N32G45X SoC and N32G45X-STB board:
 
-- `N32G45X Cortex-M4F High Performance SoC Website`_
+- `Nationstech Cortex-M4 High Performance SoC Website`_
 - `N32G457 Datasheet`_
 - `N32G457 Reference Manual`_
 
@@ -122,8 +122,14 @@ Debugging
 References
 **********
 
-.. Nationstech Cortex-M4 High Performance SoC Website:
-	https://www.nationstech.com/N32L40x/
+.. _Nationstech Cortex-M4 High Performance SoC Website:
+	https://www.nationstech.com/N32G457/
+
+.. _N32G457 Datasheet:
+    https://www.nationstech.com/down4/
+
+.. _N32G457 Reference Manual:
+    https://www.nationstech.com/down4/
 
 
 
